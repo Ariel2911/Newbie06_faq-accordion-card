@@ -4,20 +4,19 @@ const text = document.querySelectorAll('.main__list-text-container');
 const arrow = document.querySelectorAll('.main__img-arrow')
 
 const desactivar = targetElement => {
-    for (i of title){
-        i.classList.remove('main__list-title--active');
-    }
+    
     for (i of text){        
         i.classList.remove('main__list-text-container--active');
     }
-    for (i of arrow){
-        i.classList.remove('main__img-arrow--active');
+    for (i of title){
+        i.classList.remove('main__list-title--active');
     }
+    
 };
 const activar = targetElement => {
     targetElement.classList.add('main__list-title--active');
     targetElement.nextElementSibling.classList.add('main__list-text-container--active');
-    targetElement.firstElementChild.classList.add('main__img-arrow--active');
+   
 }
 
 acordion.addEventListener('click' , e => {  

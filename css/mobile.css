@@ -8,15 +8,18 @@
     --Soft-violet: hsl(273, 75%, 66%);
     --Soft-blue: hsl(240, 73%, 65%);     
 }
+.main{
+    box-sizing: border-box;
+}
 html{
     font-size: 62.5%;
 }
 body{
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
+    height: 100vh;
     margin: 0; 
-    padding: 150px 24px 90px;
+    padding: 150px 5px 90px;
     font-size: 1.2rem;
     font-family: 'Kumbh Sans', sans-serif;  
     font-weight: 400; 
@@ -24,14 +27,23 @@ body{
     background-image: linear-gradient(var(--Soft-violet) , var(--Soft-blue) );
     background-repeat: no-repeat;      
 } 
+.main::before{
+    content: url(/assets/image/illustration-woman-online-mobile.svg);
+    height: 215px;
+    position: absolute;
+    top: -106px;
+    left: 16px;
+    background-image: url(/assets/image/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 25px 110px;
+}
 .main{
-    /* position: relative; */
+    position: relative;
     text-align: center;
-    max-width: 326px;  
+    width: 326px; 
+    height: 528px; 
     padding: 120px 12px 36px;
-    border-radius: 24px;
-    /* margin-top: 144px;
-    margin-bottom: 108px; */    
+    border-radius: 24px;   
     background-color: white;
     box-shadow: 0 24px 100px -18px var(--Very-dark-desaturated-blue);
 }
@@ -50,8 +62,7 @@ body{
     border-bottom: 1px solid var(--Light-grayish-blue);
     text-align: start;    
 }
-.main__list-title{ 
-    position: relative;   
+.main__list-title{  
     display: flex;
     justify-content: space-between;  
     align-items: center; 
@@ -61,13 +72,15 @@ body{
     overflow: hidden;
     cursor: pointer;
 }
-.main__img-arrow{
-    position: absolute;
-    right: 0;
+.main__list-title::after{
+    content: url(/assets/image/icon-arrow-down.svg);
+    display: block;
+    transition: transform .3s;
 }
 .main__list-text-container{
-    height: 0;    
+    max-height: 0;    
     overflow: hidden;
+    transition: max-height .3s;
 }
 .main__list-text{
     margin:  0 12px 0 0;    
@@ -78,48 +91,10 @@ body{
 .main__list-title--active{
     font-weight: 700;    
 }
-.main__list-text-container--active{    
-    height: 100%;
-    margin-bottom: 4px;
-    
-}
-.main__img-arrow--active{    
+.main__list-title--active::after{
     transform: rotate(180deg);
 }
-
-/* .main::before{
-    content: url(/assets/image/illustration-woman-online-mobile.svg);
-    position: absolute;
-    top: -106px;
-    left: 16px;
-    
-    background-image: url(/assets/image/bg-pattern-mobile.svg);
-    background-repeat: no-repeat;
-    
-    
-} */
-
-/* .main__image-container{    
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background-image: 
-    url(/assets/image/illustration-woman-online-mobile.svg),
-    url(/assets/image/bg-pattern-mobile.svg);
-    background-position: center;
-    background-repeat: no-repeat; 
-} */
-
-/* .main__image-container{
-    height: 120px;
-    position: relative;   
-    background-position-x: center; 
+.main__list-text-container--active{    
+    max-height: 100px;
+    margin-bottom: 4px;   
 }
-
-.main__image{
-    position: absolute;
-    top: -105px;
-    left: 12px;
-} */
