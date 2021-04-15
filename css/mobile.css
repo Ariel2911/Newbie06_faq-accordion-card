@@ -16,10 +16,10 @@ html{
 }
 body{
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     height: 100vh;
     margin: 0; 
-    padding: 150px 5px 90px;
+    padding: 150px 5px 0px;
     font-size: 1.2rem;
     font-family: 'Kumbh Sans', sans-serif;  
     font-weight: 400; 
@@ -43,7 +43,7 @@ body{
     width: 326px; 
     height: 528px; 
     padding: 120px 12px 36px;
-    border-radius: 24px;   
+    border-radius: 24px; 
     background-color: white;
     box-shadow: 0 24px 100px -18px var(--Very-dark-desaturated-blue);
 }
@@ -75,12 +75,12 @@ body{
 .main__list-title::after{
     content: url(/assets/image/icon-arrow-down.svg);
     display: block;
-    transition: transform .3s;
+    transition: transform .5s;
 }
 .main__list-text-container{
-    max-height: 0;    
-    overflow: hidden;
-    transition: max-height .3s;
+    max-height: 0;   
+   overflow: hidden;
+    transition: max-height .5s;
 }
 .main__list-text{
     margin:  0 12px 0 0;    
@@ -95,6 +95,6 @@ body{
     transform: rotate(180deg);
 }
 .main__list-text-container--active{    
-    max-height: 100px;
-    margin-bottom: 4px;   
+    max-height: 60px;
+    margin-bottom: 4px;     
 }
