@@ -8,65 +8,65 @@
     --Soft-violet: hsl(273, 75%, 66%);
     --Soft-blue: hsl(240, 73%, 65%);     
 }
-.main{
-    box-sizing: border-box;
-}
+
 html{
     font-size: 62.5%;
 }
 body{
-    display: flex;
-    justify-content: center;    
-    height: 100vh;
+    min-height: 100vh;    
     margin: 0; 
-    padding: 150px 5px 0px;
+    padding: 32px 0;
     font-size: 1.2rem;
     font-family: 'Kumbh Sans', sans-serif;  
     font-weight: 400; 
     color: var(--Very-dark-grayish-blue);
     background-image: linear-gradient(var(--Soft-violet) , var(--Soft-blue) );
-    background-repeat: no-repeat;      
+    background-repeat: no-repeat;         
 } 
-.main::before{
-    content: url(/assets/image/illustration-woman-online-mobile.svg);
-    height: 215px;
-    position: absolute;
-    top: -106px;
-    left: 16px;
-    background-image: url(/assets/image/bg-pattern-mobile.svg);
-    background-repeat: no-repeat;
-    background-position: 25px 110px;
-}
-.main{
+.main{ 
     position: relative;
-    text-align: center;
+    box-sizing: border-box; 
     width: 326px; 
-    height: 528px; 
-    padding: 120px 12px 36px;
-    border-radius: 24px; 
+    height: 536px;  
+    border-radius: 24px;
+    margin: 116px auto ;
+    padding: 116px 12px 0px; 
     background-color: white;
     box-shadow: 0 24px 100px -18px var(--Very-dark-desaturated-blue);
 }
+.main::before{
+    content: "";
+    position: absolute;     
+    top: -108px;
+    display: block;
+    width: 300px;
+    height: 215px;       
+    background-image: 
+    url(/assets/image/bg-pattern-mobile.svg), 
+    url(/assets/image/illustration-woman-online-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 25px 110px , 0 0;
+}
 .main__title{
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 32px;
     font-size: 3.2rem;
     text-transform: uppercase;
 }
-
 .main__list{
     list-style: none;
     margin: 12px;
     padding: 0;    
 }
 .main__list-items{
-    border-bottom: 1px solid var(--Light-grayish-blue);
-    text-align: start;    
+    border-bottom: 1px solid var(--Light-grayish-blue);    
 }
 .main__list-title{  
     display: flex;
     justify-content: space-between;  
     align-items: center; 
-    margin: 18px 0; 
+    margin-top: 18px;
+    margin-bottom: 16px;
     font-size: 1.3rem;
     font-weight: 400;
     overflow: hidden;
@@ -79,11 +79,11 @@ body{
 }
 .main__list-text-container{
     max-height: 0;   
-   overflow: hidden;
+    overflow: hidden;
     transition: max-height .5s;
 }
 .main__list-text{
-    margin:  0 12px 0 0;    
+    margin:  0px 12px 4px 0;    
     line-height: 20px; 
     color: var(--Dark-grayish-blue);   
 }
@@ -95,6 +95,6 @@ body{
     transform: rotate(180deg);
 }
 .main__list-text-container--active{    
-    max-height: 60px;
+    max-height: 70px;
     margin-bottom: 4px;     
 }

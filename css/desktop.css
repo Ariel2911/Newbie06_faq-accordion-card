@@ -1,0 +1,52 @@
+
+
+.main{    
+    width: 918px; 
+    height: 508px; 
+    margin-top: 100px; 
+    margin-bottom: 0;
+    padding: 20px; 
+}
+
+.main::before{
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;       
+    background-image: 
+    url(/assets/image/bg-pattern-desktop.svg), 
+    url(/assets/image/illustration-woman-online-desktop.svg);
+    background-position: -600px -300px , -85px 68px;
+}
+.main::after{
+    content: url(/assets/image/illustration-box-desktop.svg);
+    position: absolute;
+    top: 200px;
+    left: -92px; 
+    transition: transform .5s; 
+}
+.main--active::after{
+    transform: translateX(-32px);    
+}
+.main__container{  
+    width: 372px; 
+    height: 80%; 
+    margin-right: 60px ;
+    margin-left: auto;       
+}
+
+.main__title{
+    text-align: start;
+    margin-top: 48px;
+    margin-bottom: 36px;
+    margin-left: 12px;
+}
+.main__list-title:hover{
+    color:red;
+}
+.main__list-title{
+    cursor: pointer;
+}
+.main__list-title::after{
+    margin-right: 16px;
+}
